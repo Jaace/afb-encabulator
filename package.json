@@ -1,0 +1,19 @@
+{
+  "name": "bangofacts",
+  "version": "1.0.0",
+  "description": "Facts that a certain character from Apex Legends may give",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaace/bangofacts.git"
+  },
+  "author": "Jason Boyle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaace/bangofacts/issues"
+  },
+  "homepage": "https://github.com/Jaace/bangofacts#readme"
+}
