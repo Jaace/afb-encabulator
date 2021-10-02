@@ -14,23 +14,38 @@ let app = http.createServer((req, res) => {
 
   // Add some states
   markov.addStates([
-    "Today is sunny",
-    "Today is rainy",
-    "The weather is sunny",
-    "The weather for today is sunny",
-    "The weather for tomorrow might be rainy",
+    "Nothing like cold steel on a hot day.",
+    "Ruck up its time to move out",
+    "Get ready to stitch 'em up",
+    "Lock and load, rinse, repeat. It’s that simple.",
+    "Time to put some lead downrange.",
+    "I've put the time in, I've earned my stripes.",
+    "Pop the smoke make 'em broke.",
+    "(Sniff - Sniff) Spent gunpowder... smells like victory.",
+    "If you can't keep up you're straight out of luck.",
+    "We'll win this thing together. Semper Fi or die.",
+    "Real men use ironsights? Heh, I use heavy artillery.",
+    "Clips are what civvies use in their hair, this is called a magazine.",
+    "Safeties off, weapons free.",
+    "Time to see if all those drills have paid off.",
+    "Amateur hour's over, time for the big leagues.",
+    "Ready up, it’s go time",
+    "I came here to party, let's rock.",
+    "Tap, rack, and clear. I'm ready.",
+    "No Cluster Foxtrots in my unit, let's run this.",
+    "We got this round squared away"
   ]);
 
   // Train the Markov Chain
   markov.train();
 
   // Generate an output
-  const foo = markov.generateRandom();
+  const foo = markov.generateRandom(50);
 
   console.log(foo);
 
   // Send back a response and end the connection
-  res.end(`<h1>HELLLOOO </h1>Markov!\n$}`);
+  res.end(`<h1>HELLLOOO </h1>Markov!\n`);
 });
 
 // Start the server on port 3000
