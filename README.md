@@ -1,1 +1,1 @@
-Adding a new README file to this repo.
+Using markov chains, create a semblance of a sentence generator based on some array of quotes.
