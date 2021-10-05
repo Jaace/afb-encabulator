@@ -33,7 +33,17 @@ let app = http.createServer((req, res) => {
     "I came here to party, let's rock.",
     "Tap, rack, and clear. I'm ready.",
     "No Cluster Foxtrots in my unit, let's run this.",
-    "We got this round squared away"
+    "We got this round squared away",
+    "Looks like aiming isn't your strong suit.",
+    "Bad effect on target, rook.",
+    "On this field you gotta be prepared for anything.",
+    "You can't dodge heavy artillery. You know that right?",
+    "Did you think the trigger would pull itself?",
+    "Don't knock yourself. I put my time in long ago.",
+    "Dropped, shocked, and rocked. Say hello to the four-oh first.",
+    "First one through the door is usually the first one in a body bag.",
+    "Good initiative, bad judgment. Try again.",
+    "I got the best of you today."
   ]);
 
   // Train the Markov Chain
