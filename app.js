@@ -44,7 +44,8 @@ let app = http.createServer((req, res) => {
     "First one through the door is usually the first one in a body bag.",
     "Good initiative, bad judgment. Try again.",
     "I got the best of you today.",
-    "Care package touching down. They usually carry rare platforms."
+    "Care package touching down. They usually carry rare platforms.",
+    "The only light that no one has ever found exists only in true darkness."
   ]);
 
   // Train the Markov Chain
