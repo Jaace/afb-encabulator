@@ -43,7 +43,8 @@ let app = http.createServer((req, res) => {
     "Dropped, shocked, and rocked. Say hello to the four-oh first.",
     "First one through the door is usually the first one in a body bag.",
     "Good initiative, bad judgment. Try again.",
-    "I got the best of you today."
+    "I got the best of you today.",
+    "Care package touching down. They usually carry rare platforms."
   ]);
 
   // Train the Markov Chain
