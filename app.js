@@ -3,16 +3,16 @@
 const http = require("http");
 const Markov = require("js-markov");
 
-// Create an instance of the http server to handle HTTP requests
+// Create an instance of the http server to handle HTTP requests.
 let app = http.createServer((req, res) => {
-  // Set a response type of plain text for the response
+  // Set a response type of plain text for the response.
   res.writeHead(200, { "Content-Type": "text/html" });
 
-  // Create a new Markov Chain
-  // By default, its type is text
+  // Create a new Markov Chain.
+  // By default, its type is text.
   var markov = new Markov();
 
-  // Add some states
+  // Add some states.
   markov.addStates([
     "Nothing like cold steel on a hot day.",
     "Ruck up its time to move out",
@@ -47,18 +47,16 @@ let app = http.createServer((req, res) => {
     "Care package touching down. They usually carry rare platforms."
   ]);
 
-  // Train the Markov Chain
+  // Train the Markov Chain.
   markov.train();
 
-  // Generate an output
-  const foo = markov.generateRandom(50);
+  // Generate an output of random variable length (15-500 characters).
+  const generatedText = markov.generateRandom(Math.floor(Math.random() * (500 - 16) + 15));
 
-  console.log(foo);
-
-  // Send back a response and end the connection
-  res.end(`<h1>HELLLOOO </h1>Markov!\n`);
+  // Send back a response and end the connection.
+  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p>`);
 });
 
-// Start the server on port 3000
+// Start the server on port 3000.
 app.listen(3000, "127.0.0.1");
 console.log("Node server running on port 3000");
