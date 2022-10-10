@@ -53,10 +53,8 @@ let app = http.createServer((req, res) => {
   // Generate an output of random variable length (15-500 characters).
   const generatedText = markov.generateRandom(Math.floor(Math.random() * (500 - 16) + 15));
 
-  console.log(foo);
-
-  // Send back a response and end the connection
-  res.end(`<h1>HELLLOOO </h1>Markov!\n`);
+  // Send back a response and end the connection.
+  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p>`);
 });
 
 // Start the server on port 3000.
