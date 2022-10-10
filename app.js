@@ -70,8 +70,10 @@ let app = http.createServer((req, res) => {
   // Generate an output of random variable length (15-500 characters).
   const generatedText = markov.generateRandom(Math.floor(Math.random() * (500 - 16) + 15));
 
+  const reloadButton = '<button onClick="window.location.reload();">Hell yeah!</button>';
+
   // Send back a response and end the connection.
-  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p>`);
+  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p><p>${reloadButton}</p>`);
 });
 
 // Start the server on port 3000.
