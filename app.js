@@ -44,7 +44,24 @@ let app = http.createServer((req, res) => {
     "First one through the door is usually the first one in a body bag.",
     "Good initiative, bad judgment. Try again.",
     "I got the best of you today.",
-    "Care package touching down. They usually carry rare platforms."
+    "Care package touching down. They usually carry rare platforms.",
+    "You sure you didn't just make it out of basic training?",
+    "Kill confirmed. Gonna add you to the list.",
+    "Like a deer in the headlights. And I'm the headlights.",
+    "No substitute for real steel.",
+    "You're not even worth the chalk to tally.",
+    "Not your day, shooter.",
+    "You played dead like a pro.",
+    "Rate of fire means nothing when you miss all the time.",
+    "What happened? Recoil hit you in the face?",
+    "[sniffs] So that's what fear smells like.",
+    "Take a breather. You lost this one.",
+    "First you lose your cool, then you lose your head.",
+    "Too slow on the draw.",
+    "Training dummies move faster than you.",
+    "Hold on tight! It’s time to drop, shock, and rock!",
+    "Hit the jets! We're dropping hot.",
+    "That'll show you for trying to go hand-and-hand with the best around."
   ]);
 
   // Train the Markov Chain.
@@ -53,8 +70,10 @@ let app = http.createServer((req, res) => {
   // Generate an output of random variable length (15-500 characters).
   const generatedText = markov.generateRandom(Math.floor(Math.random() * (500 - 16) + 15));
 
+  const reloadButton = '<button onClick="window.location.reload();">Hell yeah!</button>';
+
   // Send back a response and end the connection.
-  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p>`);
+  res.end(`<h1>Randomly generated Bangofact</h1>\n<p>${generatedText}</p><p>${reloadButton}</p>`);
 });
 
 // Start the server on port 3000.
