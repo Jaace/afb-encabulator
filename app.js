@@ -50,8 +50,8 @@ let app = http.createServer((req, res) => {
   // Train the Markov Chain.
   markov.train();
 
-  // Generate an output
-  const foo = markov.generateRandom(50);
+  // Generate an output of random variable length (15-500 characters).
+  const generatedText = markov.generateRandom(Math.floor(Math.random() * (500 - 16) + 15));
 
   console.log(foo);
 
